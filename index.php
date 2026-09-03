@@ -1,26 +1,13 @@
 <?php
-$test = 10;
-$test = 10 + 10;
-$test = 10 - 10;
-$test = 10 * 10;
-$test = $test + 10;
-$test = 2 ** 2;
-$test = 5 % 2;
-$test += 3;
-$test -= 10;
-$test *= 10;
-$test /= 10;
-$test %= 10;
-$test **= 10;
-$test = 10;
-$test++;
-$test--;
---$test;
-++$test;
+$test = "yolo";
+$test = "yolo" . "life";
+$test = $test . "life";
+$test .= "life";
+$name = "mats";
+$age = 33;
+$test = "$name is $age years old!";
+$test = 'don\'t';
+$test = '';
 
-$a = 1;
-$b = ++$a;
-var_dump($b, $a);
 
-$test = sin(pi());
 var_dump($test);
