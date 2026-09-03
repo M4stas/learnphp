@@ -1,10 +1,11 @@
 <?php
 $test = 10;
-$test = 3.1;
-$test = "Hello world!";
-$test = true;
-$test = [1, null, true, "lol", 2, 3.2];
-$test = new stdClass();
-$test->name = "Mats";
-
-var_dump($test);
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+// single line comment
