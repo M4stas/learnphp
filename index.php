@@ -1,38 +1,33 @@
 <?php
+ 
+function hello() {
+    var_dump('Hello');
+}
+ 
+hello();
+ 
+function helloName($name='Nameless', $age='unknown') {
+    var_dump("Hello, $name! You are $age years old!");
+}
+ 
+helloName('Mats', 20);
 
-for( $i = 0; $i<10; $i++){
-    var_dump($i);
+function square($a) {
+    if($a<0) {
+        return 0;
+    }
+    return $a * $a;
 }
 
-for($i = 9; $i>0; $i--){
-    var_dump($i);
+$answer = square(2);
+var_dump($answer);
+var_dump(square(4));
+
+function recursion($i) {
+    if($i<10){
+        var_dump($i);
+        recursion($i+1);
+    }
 }
 
-for($i = 2; $i<1_000_000; $i*=2){
-    var_dump($i);
-}
-
-$time = time();
-$i=0;
-while(time() < $time+1) {
-    var_dump($i++);
-}
-
-while(false) {
-    var_dump('WHILE');
-}
-
-do {
-    var_dump('DO');
-} while(false);
-/* 
-while(true) {
-
-} */
-
-$array = ['sus','sus2', 'sus3'];
-
-foreach($array as $key=>&$f){
-    var_dump($key,$f);
-    $f = 'adsadsdasd';
-}
+recursion(0);
