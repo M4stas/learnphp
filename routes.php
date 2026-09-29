@@ -30,7 +30,7 @@ Router::addRoute('/', function () {
             'body' => 'Some World content 4',
         ],
     ];
-    include __DIR__ . '/../views/index.php';
+    include __DIR__ . '/views/index.php';
 });
 
 Router::addRoute('/us', function () {
@@ -62,40 +62,9 @@ Router::addRoute('/us', function () {
         ],
     ];
 
-    include __DIR__ . '/../views/us.php';
+    include __DIR__ . '/views/us.php';
 });
 
-Router::addRoute('/', function () {
-    $title = 'Technology';
-    $posts = [
-        [
-            'title' => 'Very good tahvel',
-            'date' => 'September 22, 2026',
-            'author' => 'Rainer Tahker',
-            'body' => 'Eternal Blue'
-
-        ],
-        [
-            'title' => 'Kas sellest piisab?',
-            'date' => 'September 28, 2008',
-            'author' => 'Rainer T',
-            'body' => 'NotPetya'
-
-        ],
-        [
-            'title' => 'AI is not the way',
-            'date' => 'September 5, 2029',
-            'author' => 'Futuristic Genius',
-            'body' => 'WannaCry'
-
-        ],
-        [
-            'title' => "I'm out of ideas",
-            'date' => 'September 22, 2026',
-            'author' => 'Minecraft',
-            'body' => 'Timo: "Kuidas projektiga läheb" (päriselt praegu ütles, kui technology page teen)'
-
-        ],
-    ];
-    include __DIR__ . '/../views/technology.php';
+Router::addRoute('/test', function () {
+    $db = new App\DB();
 });
