@@ -8,3 +8,7 @@ Router::addRoute('/', [PublicController::class, 'index']);
 Router::addRoute('/us', [PublicController::class, 'us']);
 
 Router::addRoute('/test', [PublicController::class, 'test']);
+
+Router::addRoute('/technology', fn() => view('technology'));
+
+Router::addRoute('/form', fn() => view('form'));
