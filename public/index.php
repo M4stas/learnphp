@@ -15,7 +15,10 @@ spl_autoload_register(function ($class) {
 require __DIR__ . '/../helpers.php';
 require __DIR__ . '/../routes.php';
 
-$router = new Router(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+$router = new Router(
+    $_SERVER['REQUEST_URI'],
+    $_SERVER['REQUEST_METHOD']
+);
 $match = $router->match();
 if ($match) {
     if (is_callable($match->getAction())) {

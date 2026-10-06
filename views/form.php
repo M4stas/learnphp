@@ -1,9 +1,9 @@
 <?php include __DIR__ . '/partials/header.php'; ?>
 
 <main class="container">
-    <form>
+    <form action="/form" method="POST">
         <label for="name">Name:</label>
-        <input type="text" id="name" placeholder="name">
+        <input name="name" type="text" id="name" placeholder="Name">
         <label for="age">Age:</label>
         <input name="age" type="number" id="age" placeholder="age">
         <input type="submit" value="Send">
