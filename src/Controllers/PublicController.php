@@ -15,6 +15,13 @@ class PublicController
         view('index', compact('title', 'posts'));
     }
 
+    public function technology()
+    {
+        $title = 'Technology';
+        $posts = Post::where('category', 'technology');
+        view('technology', compact('title', 'posts'));
+    }
+
     public function us()
     {
         $title = 'U.S';
